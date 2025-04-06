@@ -7,7 +7,7 @@ public class comparison {
         if (s1 == s2) {
             System.out.println("Strings are equal");
         } else {
-            System.out.println("Strings are unequal");
+            System.out.println("Strings are not equal");
         }
         // Output-->>
         // Strings are equal
@@ -16,7 +16,7 @@ public class comparison {
         if (s1 == s3) {
             System.out.println("Strings are equal");
         } else {
-            System.out.println("Strings are unequal");
+            System.out.println("Strings are not equal");
         }
         // Output-->>
         // Strings are not equal
@@ -25,7 +25,7 @@ public class comparison {
         if (s1.equals(s3)) {
             System.out.println("Strings are equal");
         } else {
-            System.out.println("Strings are unequal");
+            System.out.println("Strings are not equal");
         }
         //Output-->>
         // Strings are equal

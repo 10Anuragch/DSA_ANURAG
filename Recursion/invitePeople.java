@@ -1,4 +1,4 @@
-
+ 
 /*  find the number of ways in which you can invite n people to your party,single or in pairs    */
 public class invitePeople {
     public static int callGuests(int n){

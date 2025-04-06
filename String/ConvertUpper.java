@@ -1,24 +1,16 @@
 public class ConvertUpper {
-    public static String toUppercase(String str){
-        StringBuilder sb=new StringBuilder("");
-        char ch=Character.toUpperCase(str.charAt(0));
-        sb.append(ch);
-
-        for(int i=1;i<str.length();i++){
-            if(str.charAt(i)==' '&& i<str.length()-1){
-                i++;
-                sb.append(Character.toUpperCase(str.charAt(i)));
-            }
-            else{
-                sb.append(str.charAt(i));
-            }
+    public static void toUppercase(String str){
+        String arr[]=str.split(" ");
+        for(int i=0;i<arr.length;i++){
+            char c=arr[i].charAt(0);
+            String c1=String.valueOf(c).toUpperCase();
+            String sub=arr[i].substring(1);
+            System.out.print((c1+sub).trim()+" ");
         }
-        return sb.toString()
-        ;
     }
     public static void main(String[] args) {
         String str="Hello everyone my name is Anurag chauhan";
-        System.out.println(toUppercase(str));
+        toUppercase(str);
         
         // System.out.println(str.toUpperCase());
         // HELLO EVERYONE MY NAME IS ANURAG CHAUHAN

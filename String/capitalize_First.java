@@ -19,7 +19,7 @@ public class capitalize_First{
         }
     }
     public static void main(String[] args) {
-        String str="my name is Anurag chauhan";
+        String str="my name is Anurag chaUhan";
         capitalizeFirst(str);
     }
 }
