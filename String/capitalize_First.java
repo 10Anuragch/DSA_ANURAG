@@ -13,13 +13,13 @@ public class capitalize_First{
         String arr[]=str.split(" ");
         for(int i=0;i<arr.length;i++){
             char c=arr[i].charAt(0);
-            String c1=String.valueOf(c).toUpperCase();
-            String sub=arr[i].substring(1);
-            System.out.print((c1+sub).trim()+" ");
+            String s1=String.valueOf(c).toUpperCase();
+            String sub=arr[i].substring(1).toLowerCase();//** .toLowerCase() can be used if we have uppercase letters in our string and want to convert them in lower case.
+            System.out.print((s1+sub).trim()+" ");
         }
     }
     public static void main(String[] args) {
-        String str="my name is Anurag chauhan";
+        String str="my name is Anurag chaUhan";
         capitalizeFirst(str);
     }
 }
