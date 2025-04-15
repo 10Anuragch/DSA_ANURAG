@@ -19,7 +19,6 @@ public class reverseString {
     }
     public static void main(String[] args) {
         String str = "abc";
-        String result = ReverseString(str);
-        System.out.println(result);
+        System.out.println(ReverseString(str));
     }
 }

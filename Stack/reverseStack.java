@@ -1,8 +1,10 @@
 import java.util.Stack;
 
 public class reverseStack {
+    //for this first we apply apush at bottom using recursion
+
     public static void pushAtBottom(Stack<Integer> s,int data){
-        if(s.isEmpty()){
+        while (s.isEmpty()) {
             s.push(data);
             return;
         }
@@ -10,13 +12,14 @@ public class reverseStack {
         pushAtBottom(s, data);
         s.push(top);
     }
+
     public static void reverse(Stack<Integer> s){
         if(s.isEmpty()){
             return;
         }
         int top=s.pop();
         reverse(s);
-        pushAtBottom(s,top);
+        pushAtBottom(s, top);
     }
 
     public static void print(Stack<Integer> s){

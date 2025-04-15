@@ -1,6 +1,4 @@
-/*Problem--->>>
- * Minimize the Heights II
-Difficulty: MediumAccuracy: 15.06%Submissions: 685K+Points: 4Average Time: 25m
+/*Problem--->>> Minimize the Heights II
 Given an array arr[] denoting heights of N towers and a positive integer K.
 For each tower, you must perform exactly one of the following operations exactly once.
 Increase the height of the tower by K
@@ -14,6 +12,7 @@ Examples :
 Input: k = 2, arr[] = {1, 5, 8, 10}
 Output: 5
 Explanation: The array can be modified as {1+k, 5-k, 8-k, 10-k} = {3, 3, 6, 8}.The difference between the largest and the smallest is 8-3 = 5.
+
 Input: k = 3, arr[] = {3, 9, 12, 16, 20}
 Output: 11
 Explanation: The array can be modified as {3+k, 9+k, 12-k, 16-k, 20-k} -> {6, 12, 9, 13, 17}.The difference between the largest and the smallest is 17-6 = 11. 
@@ -23,32 +22,34 @@ Constraints
 1 ≤ arr[i] ≤ 107
  */
 
- /*Approach--->>>
-  * 1.Sorting
-  * 2.initialize ans=arr[n-1]-arr[0]
-    3.check condition if ant value after operation is negative then skips
-    4.find minimum and maximum height
-    5.find final answer by minimizing the ans and maximum height-minimum height
-  */
+/*Approach--->>>
+ * 1.Sorting:sort the array
+ * 2.initialize ans=arr[n-1]-arr[0]
+   3.check condition if and value after operation is negative then skips
+   4.find minimum and maximum height
+   5.find final answer by minimizing the ans and maximum height-minimum height
+ */
 import java.util.Arrays;
-public class minimizeHeightII{
+
+public class minimizeHeightII {
   static int getMinDiff(int[] arr, int k) {
-    int n=arr.length;
+    int n = arr.length;
     Arrays.sort(arr);
-    int ans=arr[n-1]-arr[0];
-    for(int i=1;i<arr.length;i++){
-        if(arr[i]-k<0){
-            continue;
-        }
-        int minHeight=Math.min(arr[0]+k,arr[i]-k);
-        int maxHeight=Math.max(arr[i-1]+k,arr[n-1]-k);
-        ans=Math.min(ans,maxHeight-minHeight);
+    int ans = arr[n - 1] - arr[0];
+    for (int i = 1; i < arr.length; i++) {
+      if (arr[i] - k < 0) {
+        continue;
+      }
+      int minHeight = Math.min(arr[0] + k, arr[i] - k);
+      int maxHeight = Math.max(arr[i - 1] + k, arr[n - 1] - k);
+      ans = Math.min(ans, maxHeight - minHeight);
     }
-return ans;
-}
+    return ans;
+  }
+
   public static void main(String[] args) {
-    int arr[]={3, 9, 12, 16, 20};
-    int k=3;
+    int arr[] = { 3, 9, 12, 16, 20 };
+    int k = 3;
     System.out.println(getMinDiff(arr, k));
   }
 }
