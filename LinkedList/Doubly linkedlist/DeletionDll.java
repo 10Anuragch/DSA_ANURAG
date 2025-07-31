@@ -19,7 +19,7 @@ public class DeletionDll {
     public static Node deleteFromHead(Node head){
         if (head == null) {
             System.out.println("List is empty. No node to delete.");
-            return ;
+            return;
         }
 
         // If the list has only one node

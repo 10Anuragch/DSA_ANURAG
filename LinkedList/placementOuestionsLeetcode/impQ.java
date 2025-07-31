@@ -1,5 +1,5 @@
 //Flatten a doubly linked list
-/*
+
 // Definition for a Node.
 class Node {
     public int val;
@@ -7,7 +7,7 @@ class Node {
     public Node next;
     public Node child;
 };
-*/
+
 
 class impQ {
     public Node flatten(Node head) {

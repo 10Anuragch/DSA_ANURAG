@@ -8,7 +8,7 @@ public class findPerm {
         // recursion
         for(int i=0;i<str.length();i++){
             char curr=str.charAt(i);
-            //"abcde"="ab"+"de"="abde" when we have picked c then we have to remove c from next choices
+            //"abcde"=> "ab" + "de" = "abde" when we have picked c then we have to remove c from next choices
            String newStr=str.substring(0, i)+str.substring(i+1, str.length());
            Findperm(newStr, ans+curr);
         }

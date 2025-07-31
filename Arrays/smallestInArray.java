@@ -4,7 +4,7 @@ public class smallestInArray {
     public static int Smallest(int arr[]) {
         int smallest = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
-            if (smallest > arr[i]) {
+            if (arr[i] < smallest) {
                 smallest = arr[i];
             }
         }

@@ -5,6 +5,7 @@ import java.util.*;
 public class dijkstra {
     static class Edge{
         int src,dest,wt;
+        
         Edge(int s,int d,int wt){
             this.src=s;
             this.dest=d;

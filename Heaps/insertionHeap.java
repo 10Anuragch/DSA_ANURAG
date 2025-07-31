@@ -1,8 +1,5 @@
-
 // package Heaps;
 import java.util.*;
-
-// import java.util.ArrayList;
 public class insertionHeap {// time complexity = O(log n)
      static class Heap {
         ArrayList<Integer> arr = new ArrayList<>();

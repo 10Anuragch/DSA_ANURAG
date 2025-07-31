@@ -5,11 +5,11 @@ public class PalindromicPattern{
          for(int j=1;j<=n-i;j++){
             System.out.print(" ");
          }
-         for(int j=i;j>=1;j--){
-            System.out.print(j);
+         for(int k=i;k>=1;k--){
+            System.out.print(k);
          }
-         for(int j=2;j<=i;j++){
-            System.out.print(j);
+         for(int l=2;l<=i;l++){
+            System.out.print(l);
          }
          System.out.println();
       }

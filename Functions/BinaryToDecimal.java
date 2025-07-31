@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BinaryToDecimal {
     public static void BinToDec(int binNum){
         int myNum=binNum;
@@ -12,6 +14,11 @@ public class BinaryToDecimal {
         System.out.println("Decimal Number of "+ myNum + " = "+DecNum);
     }
     public static void main(String args[]){
-        BinToDec(1001);
+        // BinToDec(1001);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter Binary Nummbber: ");
+        int binNum=sc.nextInt();
+        BinToDec(binNum);
+
     }
 }

@@ -22,7 +22,7 @@ public class placeBinary {
 
         //if last place is 0 or 1 then we have to place 0
         binary(n-1, 0, str+"0");
-        //and if alst place is 0 then we can also place 1
+        //and if last place is 0 then we can also place 1
         if(lastPlace==0){
             binary(n-1, 1, str+"1");
         }

@@ -11,7 +11,7 @@ public class subSequences {
             System.out.println(newStr);
             return;
         }
-        //each character has to choice sto be a part of subsequence and not to be a part of this
+        //each character has to choices to be a part of subsequence and not to be a part of this
         char currChar=str.charAt(idx);
         
         //to be

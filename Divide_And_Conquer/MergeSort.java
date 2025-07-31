@@ -33,11 +33,11 @@ public class MergeSort {
         int k = 0;// iterator for temp array
 
         while (i <= mid && j <= endidx) {
-            if (arr[i] < arr[j]) {
+            if (arr[i] < arr[j]) {//if we have to put the element from left part
                 temp[k] = arr[i];
                 i++;
                 k++;
-            } else {
+            } else {//if we have to put the element from right part
                 temp[k] = arr[j];
                 j++;
                 k++;

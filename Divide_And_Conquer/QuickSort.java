@@ -1,14 +1,16 @@
 // package Divide_And_Conquer;
 /*Time complexity -->> Average case:O(nlogn) & Worst case -->> O(n^2)
  * Space complexity -->> O(1)
- * this have no need to take more memory pr extra space
+ * this have no need to take more memory or extra space
 */
 
 /*Approache:-->>
+
 1.Pivot(last element)
 2.Partition(parts)
 3.Quick Sort(Left part)
 4.Quick Sort(Right part)
+
  */
 
 //M.IMP -->> The worst case occurs when array is already sorted and pivot is starting and ending element 

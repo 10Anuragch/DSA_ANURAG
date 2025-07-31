@@ -17,7 +17,7 @@ public class interleaved_2_Halves {
         while (!firstHalf.isEmpty()) {
             // step1:add elements of first half into original queue
             q.add(firstHalf.remove());
-            // step2:add elemrnts of original queue(from front) into original queue(into rear)
+            // step2:add elements of original queue(from front) into original queue(into rear)
             q.add(q.remove());
         }
     }

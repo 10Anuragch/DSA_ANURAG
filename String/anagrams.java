@@ -26,17 +26,17 @@ public class anagrams{
 
         //convert string into array
 
-        char[] str1Arr=str1.toCharArray();
-        char[] str2Arr=str2.toCharArray();
+        char[] Arr1=str1.toCharArray();
+        char[] Arr2=str2.toCharArray();
 
         //sort the strArray
 
-        Arrays.sort(str1Arr);
-        Arrays.sort(str2Arr);
+        Arrays.sort(Arr1);
+        Arrays.sort(Arr2);
 
         //if the sorted strArrays are same or identical then the strinngs are anagrams
 
-        boolean result=Arrays.equals(str1Arr,str2Arr);
+        boolean result=Arrays.equals(Arr1,Arr2);
 
         if(result){
             System.out.println(str1+" and "+str2+" are anagrams");
