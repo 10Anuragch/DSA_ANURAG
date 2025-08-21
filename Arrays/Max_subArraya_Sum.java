@@ -27,8 +27,8 @@ public class Max_subArraya_Sum {
      * 
      */
 
-    // -----2nd Way (Best Way)------ with time complexity O(n^2) -----(Prefix Sum
-    // Appeoach)
+    // -----2nd Way (Better Way)------ with time complexity O(n^2) -----(Prefix Sum Approach)
+    
     /*
      * int currSum=0;
      * int maxSum=Integer.MIN_VALUE;
