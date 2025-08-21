@@ -18,27 +18,27 @@ public class InsertionInLL {
         // insretion at end
 
         void insertAtEnd(int val) {
-            Node temp = new Node(val);
+            Node newNode = new Node(val);
             // for empty list
             if (head == null) {
-                head = temp;
+                head = newNode;
 
             } else {
-                tail.next = temp;
+                tail.next = newNode;
             }
-            tail = temp;
+            tail = newNode;
         }
 
         // Insertion at begining
         void insertAtBeg(int val) {
-            Node temp = new Node(val);
+            Node newNode = new Node(val);
             // for empty list
             if (head == null) {
-                head = temp;
+                head = newNode;
             } else {
-                temp.next = head;
+                newNode.next = head;
             }
-            head = temp;
+            head = newNode;
         }
 
         // insertion at particular index
@@ -98,13 +98,13 @@ public class InsertionInLL {
 
         public static int search(int key) {
             Node temp = head;
-            int i = 0;
+            int idx = 0;
             while (temp != null) {
                 if (temp.data == key) {
-                    return i;
+                    return idx;
                 }
                 temp = temp.next;
-                i++;
+                idx++;
             }
             //key not found
             return -1;

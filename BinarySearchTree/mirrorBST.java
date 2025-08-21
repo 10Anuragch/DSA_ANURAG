@@ -11,15 +11,15 @@ public class mirrorBST {
     }
 
     //complexity -->> O(n)
-    public static Node createMirror(Node root){
+    public static Node Mirror(Node root){
         if (root==null) {
             return null;
         }
-        Node lMirror=createMirror(root.left);
-        Node rMirror=createMirror(root.right);
+        Node left=Mirror(root.left);
+        Node right=Mirror(root.right);
 
-        root.left=rMirror;
-        root.right=lMirror;
+        root.left=right;
+        root.right=left;
         return root;
     }
 
@@ -39,7 +39,7 @@ public class mirrorBST {
         root.left.right=new Node(6);
         root.right.right=new Node(11);
 
-        root=createMirror(root);
+        root=Mirror(root);
         preOrder(root);
     }
 }

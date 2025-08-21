@@ -11,7 +11,7 @@ public class PairingFriends {
         //choice -- single or pair
         int single=PairedFriends(n-1);
         int pair=(n-1)*PairedFriends(n-2);
-        return single+pair;
+        return single + pair;
     }
     public static void main(String[] args) {
     System.out.println(PairedFriends(3));

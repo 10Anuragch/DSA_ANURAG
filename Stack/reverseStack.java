@@ -8,6 +8,7 @@ public class reverseStack {
             s.push(data);
             return;
         }
+
         int top=s.pop();
         pushAtBottom(s, data);
         s.push(top);
@@ -22,6 +23,8 @@ public class reverseStack {
         pushAtBottom(s, top);
     }
 
+    //print function
+    
     public static void print(Stack<Integer> s){
         while(!s.isEmpty()){
             System.out.println(s.pop());

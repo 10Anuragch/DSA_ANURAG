@@ -1,33 +1,37 @@
+
 /* problem-->>
  * for given n lines on x-axis,use 2 lines to form a container such that
  * it holds maximum water
  */
 import java.util.*;
-public class Container{
 
-    //optimized 2 pointer approach -- O(n)
-    public static int storeWater(ArrayList<Integer> list){
-        int maxWater=0;
-        int lp=0;
-        int rp=list.size()-1;
-        while (lp<rp) {
-            //calculate area of water
-            int height=Math.min(list.get(lp),list.get(rp));
-            int width=rp-lp;
-            int currWater=height*width;
-            maxWater=Math.max(maxWater,currWater);
+public class Container {
 
-            //update ptr
-            if(list.get(lp)<list.get(rp)){
+    // optimized 2 pointer approach -- O(n)
+    public static int storeWater(ArrayList<Integer> list) {
+        int maxArea = 0;
+        int lp = 0;
+        int rp = list.size() - 1;
+        while (lp < rp) {
+            // calculate area of water
+            int height = Math.min(list.get(lp), list.get(rp));
+            int width = rp - lp;
+            int area = height * width;
+
+            maxArea = Math.max(maxArea, area);
+
+            // update ptr
+            if (list.get(lp) < list.get(rp)) {
                 lp++;
-            }else{
+            } else {
                 rp--;
             }
         }
-        return maxWater;
+        return maxArea;
     }
+
     public static void main(String[] args) {
-        ArrayList<Integer> list=new ArrayList<>();
+        ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         list.add(8);
         list.add(6);

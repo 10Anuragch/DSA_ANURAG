@@ -24,7 +24,7 @@ public class QuickSort {
 
     //recursive function
     public static void quickSort(int arr[],int p,int r){
-        if(p>=r){
+        if(p>=r){ // where p is starting element and r is endinng element
             return;
         }
         //last element
@@ -33,8 +33,8 @@ public class QuickSort {
         quickSort(arr, q+1, r);//right part
     }
     public static int partition(int arr[],int p,int r){
-        int pivot=arr[r];
-        int i=p-1;//to make place for els smaller than pivot
+        int pivot=arr[r];//choose last element as pivot 
+        int i=p-1;//to make place for elements smaller than pivot
 
         for(int j=p;j<r;j++){
             if(arr[j]<=pivot){
